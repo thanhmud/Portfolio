@@ -1,0 +1,320 @@
+:root {
+	/* Color Palette */
+	--color-primary: #009fff;
+	--color-secondary-1: #0070ff;
+	--color-secondary-2: #003250;
+	--color-secondary-3: #0f203e;
+	--color-black: #000000;
+	--color-dark: #444;
+	--color-dark-1: #222222;
+	--color-dark-2: #444444;
+	--color-dark-3: #666666;
+	--color-grey-1: #888888;
+	--color-grey-2: #cccccc;
+	--color-light-1: #f6f6f6;
+	--color-white: #ffffff;
+	--color-warning: #f19a1f;
+	--color-error: #ba0000;
+	--color-success: #76ca66;
+	--color-processing: #a0c3ff;
+	--color-yellow: #D2902F;
+	--color-yellow-2: #dd4b32;
+
+	/* Button Colors */
+	--button-primary: #ee8c00;
+	--button-hover: #bd6f00;
+
+	/* Typography - Headings */
+	--font-h1: 3rem; /* 42px */
+	--font-h2: 2.625rem; /* 32px */
+	--font-h3: 2rem; /* 28px */
+	--font-h4: 1.5rem; /* 24px */
+	--font-h5: 1.25rem; /* 20px */
+	--font-h6: 1.125rem; /* 18px */
+
+	/* Typography - Subheading 1 */
+	--font-sub1-1: 2.625rem; /* 42px */
+	--font-sub1-2: 2rem; /* 32px */
+	--font-sub1-3: 1.5rem; /* 24px */
+	--font-sub1-4: 1.25rem; /* 20px */
+	--font-sub1-5: 1.125rem; /* 18px */
+	--font-sub1-6: 1rem; /* 16px */
+	--font-sub1-7: 0.875rem; /* 14px */
+
+	/* Typography - Subheading 2 */
+	--font-sub2-1: 2.625rem; /* 42px */
+	--font-sub2-2: 2rem; /* 32px */
+	--font-sub2-3: 1.5rem; /* 24px */
+	--font-sub2-4: 1.25rem; /* 20px */
+	--font-sub2-5: 1.125rem; /* 18px */
+	--font-sub2-6: 1rem; /* 16px */
+	--font-sub2-7: 0.875rem; /* 14px */
+
+	/* Typography - Bodytext */
+	--font-body1: 1.25rem; /* 20px */
+	--font-body2: 1.125rem; /* 18px */
+	--font-body3: 1rem; /* 16px */
+	--font-body4: 0.875rem; /* 14px */
+	--font-body5: 0.75rem; /* 12px */
+
+	/* Spacing */
+	--spacing-1: 0.25rem; /* 4px */
+	--spacing-2: 0.5rem; /* 8px */
+	--spacing-3: 1rem; /* 16px */
+	--spacing-4: 1.5625rem; /* 25px */
+	--spacing-5: 2rem; /* 32px */
+	--spacing-6: 2.5rem; /* 40px */
+	--spacing-7: 3.5rem; /* 56px */
+
+	/* Layout */
+	--max-width-container: 95.5rem; /* 1400px */
+}
+
+/* General Reset */ 
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  	margin: 0;
+  	padding: 0;
+  	border: 0;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  	display: block;
+}
+ul {
+  	list-style-type: none;
+}
+main {
+	position:relative;
+  	margin-top: 6.25rem;
+  	height: 100vh;
+}
+a {
+  	text-decoration: none;
+}
+body {
+  	line-height: 1.5;
+  	color: var(--color-dark-2);
+  	background-color: var(--color-white);
+  	text-rendering: optimizeLegibility;
+  	-moz-osx-font-smoothing: grayscale;
+  	-webkit-font-smoothing: antialiased;
+  	overscroll-behavior: none;
+  	touch-action: manipulation;
+  	-webkit-user-drag: none;
+  	-ms-content-zooming: none;
+  	vertical-align: baseline;
+}
+
+@font-face {
+    font-family: 'Nunito-Medium'; 
+    src: url('../fonts/Nunito/Nunito-Medium.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Nunito-Black';
+    src: url('../fonts/Nunito/Nunito-Black.ttf') format('opentype'); 
+    font-weight: bold;
+    font-style: normal;
+}
+
+*{
+	font-family: 'Nunito-Medium', sans-serif;
+	box-shadow:border-box;
+}
+html {
+	font-family: 'Nunito-Medium', sans-serif;
+	font-size: 1vw;
+	scroll-behavior: smooth;
+}
+b {
+	font-family: 'Nunito-Black', sans-serif;
+}
+img {
+	vertical-align: middle;
+	border-style: none;
+}
+
+/* Headings */
+h1 {
+	font-size: var(--font-h1);
+	font-weight: bold;
+}
+
+h2 {
+	font-size: var(--font-h2);
+	font-weight: bold;
+}
+
+h3 {
+	font-size: var(--font-h3);
+	font-weight: bold;
+}
+
+h4 {
+	font-size: var(--font-h4);
+	font-weight: bold;
+}
+
+h5 {
+	font-size: var(--font-h5);
+	font-weight: bold;
+}
+
+h6 {
+	font-size: var(--font-h6);
+	font-weight: bold;
+}
+.justify-content-between {
+	justify-content: space-between;
+}
+.justify-content-around {
+	justify-content: space-around;
+}
+.justify-content-center {
+	justify-content: center;
+}
+.align-items-center {
+	align-items: center;
+}
+.bold {
+	font-weight: bold;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.text-center {
+	text-align: center;
+}
+.flex {
+	display: flex;
+}
+.d-none {
+	display: none;
+}
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+/* Section */
+.section{
+	color: white;
+}
+.section::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8); 
+	z-index: -1;
+}
+.section:nth-child(odd) {
+	background-image: url('../images/bg-left.png');
+	background-size: cover;
+	background-position: bottom;
+}
+.section:nth-child(even) {
+	background-image: url('../images/bg-right.png');
+	background-size: cover;
+	background-position: bottom;
+}
+
+/* Container */
+.container {
+	max-width: var(--max-width-container);
+	margin: 0 auto;
+}
+#pagepiling .container {
+	height: 88vh;
+	padding: 7rem 1rem;
+}
+
+/* PP */
+#pp-nav li .active span, .pp-slidesNav .active span {
+	background: var(--color-primary);
+    width: 1.5rem;
+    height: 1.5rem;
+}
+#pp-nav span, .pp-slidesNav span {
+    width: .6rem;
+    height: .6rem;
+    border: 1px solid var(--color-primary);
+    background: rgba(0, 0, 0, 0);
+    transition: all 0.8s ease;
+    position: initial;
+    border-color: var(--color-secondary-2) !important;
+}
+#pp-nav li, .pp-slidesNav li {
+    width: 2rem;
+    height: 1.2rem;
+}
+#pp-nav li a, .pp-slidesNav li a {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pp-tooltip.right {
+    right: 2.2rem;
+}
+.pp-tooltip.left {
+    left: 2.2rem;
+}
+img	{
+	max-width: 100%;
+}
+
+/* scroll */
+::-webkit-scrollbar {
+  width: .625rem;
+  height: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(#f9d9f9);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    #0061AA 30%,
+    #469BD5 100%
+  );
+  border-radius: 99rem;
+}
+
+h2 {
+  	border-bottom: .15em solid var(--color-primary);
+  	white-space: nowrap;
+  	/*overflow: hidden;*/
+  	width: 0;
+}
+
+@keyframes title-line {
+  	from { width: 0 }
+  	to { width: 15rem }
+}
+
+@keyframes title-border {
+  	from, to { border-color: transparent }
+  	20% { border-color: var(--color-primary) }
+}
+
+@media (min-width: 1600px) {
+	html {
+	    font-size: 16px;
+	}
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  :root {
+    --max-width-container: 100%; /* 375px */
+  }
+  html {
+    font-size: 2vw;
+  }
+}
+@media (max-width: 540px) {
+  html {
+    font-size: 2.5vw;
+  }
+}
