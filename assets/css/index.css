@@ -163,15 +163,13 @@
 }
 
 /* Responsive */
+@media screen and (min-width: 769px) {
+	/*.section-about .container .row {
+		height: 50rem;
+	}*/
+}
 @media screen and (max-width: 768px) {
-	h2 {
-	    font-size: 1.8rem;
-	}
-	#pagepiling .container {
-	    height: 90vh;
-	    padding: 5rem 1rem 0;
-	}
-
+	
 	/* menu */
 	#menu { 
 		display: inherit;
