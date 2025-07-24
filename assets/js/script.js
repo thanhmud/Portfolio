@@ -1,7 +1,4 @@
  $(document).ready(function() {
-    /*
-    * Plugin intialization
-    */
     $('#pagepiling').pagepiling({
         menu: '#menu',
         anchors: ['page1', 'page2', 'page3', 'page4'],
@@ -30,8 +27,9 @@
             var $currentSection = $('.section').eq(index - 1);
             $currentSection.find('[data-aos]').each(function(){
               // Reset trạng thái
-              $(this).removeClass('aos-animate'); // xóa class đã chạy
-              void this.offsetWidth; // trigger reflow
+              $(this).removeClass('aos-animate');
+              // trigger reflow
+              void this.offsetWidth; 
             });
 
             // Gọi lại refresh để AOS kiểm tra lại
@@ -42,20 +40,9 @@
     function animateTyping(heading) {
       const textLength = heading.textContent.length;
       heading.style.animation = 'none';
-      heading.offsetHeight; // trigger reflow
+      // trigger reflow
+      heading.offsetHeight; 
       heading.style.animation = `title-line 1s steps(${textLength}, end) forwards, title-border 1s step-end `;
     }
 
-    /*
-    * Internal use of the demo website
-    */
-    // $('#showExamples').click(function(e){
-    //     e.stopPropagation();
-    //     e.preventDefault();
-    //     $('#examplesList').toggle();
-    // });
-
-    // $('html').click(function(){
-    //     $('#examplesList').hide();
-    // });
 });
